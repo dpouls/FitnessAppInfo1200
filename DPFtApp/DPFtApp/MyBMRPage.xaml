@@ -1,0 +1,28 @@
+﻿
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Dallin's BMR Page"
+             x:Class="DPFtApp.MyBMRPage">
+    
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label x:Name="FemaleBMRlbl" Text="FEMALE BMR: " Grid.Row="0" HorizontalOptions="End" VerticalOptions="End"/>
+            <Label x:Name="FemaleBMRResults" Text="Results " Grid.Row="0" Grid.Column="1" HorizontalOptions="Start" VerticalOptions="End"/>
+            <Label x:Name="MaleBMRlbl" Text="MALE BMR: " Grid.Row="1" HorizontalOptions="End" VerticalOptions="Start"/>
+            <Label x:Name="MaleBMRResults" Text="Results..." Grid.Row="1" Grid.Column="1" HorizontalOptions="Start" />
+            <Button x:Name="BMRCalculateBtn" Text="Calculate" Grid.Row="2" Grid.ColumnSpan="2" Clicked="BMRCalculateBtn_Clicked"/>
+            <Button x:Name="BMRCloseBtn" Text="Close" Grid.Row="3" Grid.ColumnSpan="2" Clicked="BMRCloseBtn_Clicked"/>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
