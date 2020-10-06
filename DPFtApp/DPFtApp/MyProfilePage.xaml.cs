@@ -33,6 +33,8 @@ namespace DPFtApp
         /// <param name="e"></param>
         private void MyProfileCloseBtn_Clicked(object sender, EventArgs e)
         {
+            try
+            {
             //set weight to the ProfWeight global variable
             FitnessGlobalVariables.ProfWeight = double.Parse(WeightEnt.Text);
             //set Height to the ProfHeight global variable
@@ -41,6 +43,13 @@ namespace DPFtApp
             FitnessGlobalVariables.ProfAge = double.Parse(AgeEnt.Text);
             //when clicked, returns user to the main page (exits my profile page)
             Application.Current.MainPage.Navigation.PopModalAsync();
+            }
+            catch
+            {
+                DisplayAlert("Invalid Input", "Please enter integers in the Weight, Height, and Age fields.", "Close");
+              
+            }
+
         }
         /// <summary>
         /// Allows the user to see the before picture

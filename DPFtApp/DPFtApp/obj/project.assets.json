@@ -634,11 +634,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dalli\\source\\repos\\DPProject3\\DPFtApp\\DPFtApp\\DPFtApp.csproj",
+      "projectUniqueName": "C:\\Users\\dalli\\source\\repos\\DPProject4\\DPFtApp\\DPFtApp\\DPFtApp.csproj",
       "projectName": "DPFtApp",
-      "projectPath": "C:\\Users\\dalli\\source\\repos\\DPProject3\\DPFtApp\\DPFtApp\\DPFtApp.csproj",
+      "projectPath": "C:\\Users\\dalli\\source\\repos\\DPProject4\\DPFtApp\\DPFtApp\\DPFtApp.csproj",
       "packagesPath": "C:\\Users\\dalli\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dalli\\source\\repos\\DPProject3\\DPFtApp\\DPFtApp\\obj\\",
+      "outputPath": "C:\\Users\\dalli\\source\\repos\\DPProject4\\DPFtApp\\DPFtApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"

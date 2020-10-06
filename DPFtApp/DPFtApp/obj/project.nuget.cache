@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bEyWsbNdoGrHA6CtBdTlqoCOZTo03UWLGe4GEV/Oa3oUFfIh2o0KWePeOQJg7coeLZSEKDpu3YLa9ohXwGEbEg==",
+  "dgSpecHash": "ahurukaROlVi20wpklxWt/bnx4pR8LWBPB+Phzm//zcU9zOZKPVF/msiQpFg196o7yr+LUJijSl9aVgBz+vF6Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\dalli\\source\\repos\\DPProject3\\DPFtApp\\DPFtApp\\DPFtApp.csproj",
+  "projectFilePath": "C:\\Users\\dalli\\source\\repos\\DPProject4\\DPFtApp\\DPFtApp\\DPFtApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dalli\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\dalli\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",

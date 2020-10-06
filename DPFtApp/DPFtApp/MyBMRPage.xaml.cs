@@ -23,6 +23,14 @@ namespace DPFtApp
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MyBMRPage : ContentPage
     {
+        const decimal FEMALE_BMR_INDEX = 655m;
+        const decimal FEMALE_BMR_INDEX_WEIGHT = 4.35m;
+        const decimal FEMALE_BMR_INDEX_HEIGHT = 4.7m;
+        const decimal FEMALE_BMR_INDEX_AGE = 4.7m;
+        const decimal MALE_BMR_INDEX = 66m;
+        const decimal MALE_BMR_INDEX_WEIGHT = 6.23m;
+        const decimal MALE_BMR_INDEX_HEIGHT = 12.7m;
+        const decimal MALE_BMR_INDEX_AGE = 6.8m;
         public MyBMRPage()
         {
             InitializeComponent();
@@ -35,6 +43,10 @@ namespace DPFtApp
         private async void BMRCalculateBtn_Clicked(object sender, EventArgs e)
         {
             //delcare varialbes to hold the female and male BMR values
+            
+            decimal ProfWeight = (decimal)FitnessGlobalVariables.ProfWeight;
+            decimal ProfHeight = (decimal)FitnessGlobalVariables.ProfHeight;
+            decimal ProfAge = (decimal)FitnessGlobalVariables.ProfAge;
             decimal femaleBMR;
             decimal maleBMR;
             //make it a modal
@@ -47,8 +59,8 @@ namespace DPFtApp
             await Navigation.PushModalAsync(modalPage);
             await Task.Run(() => waitHandle.WaitOne());
             //calculate the female and male BMR and store the result for each calculation in a seperate variable. 
-            femaleBMR = 655m + (4.35m * (decimal)FitnessGlobalVariables.ProfWeight) + (4.7m * (decimal)FitnessGlobalVariables.ProfHeight) - (4.7m * (decimal)FitnessGlobalVariables.ProfAge);
-            maleBMR = 66m + (6.23m * (decimal)FitnessGlobalVariables.ProfWeight) + (12.7m * (decimal)FitnessGlobalVariables.ProfHeight) - (6.8m * (decimal)FitnessGlobalVariables.ProfAge);
+            femaleBMR = FEMALE_BMR_INDEX + (FEMALE_BMR_INDEX_WEIGHT * (decimal)FitnessGlobalVariables.ProfWeight) + (FEMALE_BMR_INDEX_HEIGHT * (decimal)FitnessGlobalVariables.ProfHeight) - (FEMALE_BMR_INDEX_AGE * (decimal)FitnessGlobalVariables.ProfAge);
+            maleBMR = MALE_BMR_INDEX + (MALE_BMR_INDEX_WEIGHT * (decimal)FitnessGlobalVariables.ProfWeight) + (MALE_BMR_INDEX_HEIGHT * (decimal)FitnessGlobalVariables.ProfHeight) - (MALE_BMR_INDEX_AGE * (decimal)FitnessGlobalVariables.ProfAge);
             //set the labels to the corresponding results
             FemaleBMRlbl.Text = femaleBMR.ToString("n2");
             MaleBMRlbl.Text = maleBMR.ToString("n2");
