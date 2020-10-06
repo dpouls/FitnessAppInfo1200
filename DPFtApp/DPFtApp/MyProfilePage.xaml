@@ -11,6 +11,7 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
             <RowDefinition Height="4*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
@@ -23,17 +24,17 @@
         <Entry x:Name="MyProfileFirstNameEnt" Grid.Row="0" Grid.ColumnSpan="2" Placeholder="First Name"  VerticalOptions="Start" FontSize="15"/>
         <Entry x:Name="MyProfileLastNameEnt" Grid.Row="1" Grid.ColumnSpan="2" Placeholder="Last Name"  VerticalOptions="Start" FontSize="15" />
         <Entry x:Name="MyProfilePrefNameEnt" Grid.Row="2" Grid.ColumnSpan="2" Placeholder="Prefered Name"  VerticalOptions="Start" FontSize="15"/>
-        <Entry x:Name="WeightEnt" Grid.Row="3" Grid.ColumnSpan="2" Placeholder="Weight"  VerticalOptions="Start" FontSize="15"  Keyboard="Telephone"/>
-        <Entry x:Name="HeightEnt" Grid.Row="4" Grid.ColumnSpan="2" Placeholder="Height"  VerticalOptions="Start" FontSize="15" Keyboard="Telephone"/>
-        <Entry x:Name="AgeEnt" Grid.Row="5" Grid.ColumnSpan="2" Placeholder="Age"  VerticalOptions="Start" FontSize="15" Keyboard="Telephone"/>
+        <Entry x:Name="WeightEnt" Grid.Row="3" Grid.ColumnSpan="2" Placeholder="Weight"  VerticalOptions="Start" FontSize="15"  />
+        <Entry x:Name="HeightEnt" Grid.Row="4" Grid.ColumnSpan="2" Placeholder="Height"  VerticalOptions="Start" FontSize="15" />
+        <Entry x:Name="AgeEnt" Grid.Row="5" Grid.ColumnSpan="2" Placeholder="Age"  VerticalOptions="Start" FontSize="15" />
         <Image x:Name="ImgProfile"
            Source="before.jpg"
-           Grid.Row="6"
+           Grid.Row="7"
            Grid.ColumnSpan="2"
            HorizontalOptions="Center"/>
-
-        <Button x:Name="BtnBefore" Text="BEFORE" Grid.Row="7" Grid.Column="0" Clicked="BtnBefore_Clicked"/>
-        <Button x:Name="BtnAfter" Text="AFTER" Grid.Row="7" Grid.Column="1" Clicked="BtnAfter_Clicked" />
-        <Button x:Name="MyProfileCloseBtn" Text="CLOSE" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="2" Clicked="MyProfileCloseBtn_Clicked"/>
+        <Button x:Name="BtnClearAll_Click" Text="Clear All" Grid.Row="6" Grid.ColumnSpan="2" Clicked="BtnClearAll_Clicked"/>
+        <Button x:Name="BtnBefore" Text="BEFORE" Grid.Row="8" Grid.Column="0" Clicked="BtnBefore_Clicked"/>
+        <Button x:Name="BtnAfter" Text="AFTER" Grid.Row="8" Grid.Column="1" Clicked="BtnAfter_Clicked" />
+        <Button x:Name="MyProfileCloseBtn" Text="CLOSE" Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="2" Clicked="MyProfileCloseBtn_Clicked"/>
     </Grid>
 </ContentPage>

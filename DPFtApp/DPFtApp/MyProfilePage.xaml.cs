@@ -2,8 +2,8 @@
 //Class: (INFO 1200)
 //Section: (002)
 //Professor: (Crandall)
-//Date: 9/13/2020
-//Project #: 2
+//Date: 10/5/2020
+//Project #: 4
 //I declare that the source code contained in this assignment was written solely by me.
 //I understand that copying any source code, in whole or in part,
 // constitutes cheating, and that I will receive a zero on this project
@@ -33,6 +33,7 @@ namespace DPFtApp
         /// <param name="e"></param>
         private void MyProfileCloseBtn_Clicked(object sender, EventArgs e)
         {
+            //try to see if there's any issues with the parsing, if not run this code
             try
             {
             //set weight to the ProfWeight global variable
@@ -44,9 +45,12 @@ namespace DPFtApp
             //when clicked, returns user to the main page (exits my profile page)
             Application.Current.MainPage.Navigation.PopModalAsync();
             }
+            //if there are errors display this message
             catch
             {
+                //displaay the aleart
                 DisplayAlert("Invalid Input", "Please enter integers in the Weight, Height, and Age fields.", "Close");
+                BtnClearAll_Clicked(sender,e);
               
             }
 
@@ -75,5 +79,23 @@ namespace DPFtApp
             // shows the user an encouraging message
             DisplayAlert("Good Job!", "You're KILLING it!", "Close");
         }
+        /// <summary>
+        /// clears all height, weight, and age variables/inputs to 0
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnClearAll_Clicked(object sender, EventArgs e)
+        {
+            //clear the fields
+            WeightEnt.Text = "";
+            HeightEnt.Text = "";
+            AgeEnt.Text = "";
+
+            //reassign variables to equal zero
+            FitnessGlobalVariables.ProfWeight = 0;
+            FitnessGlobalVariables.ProfHeight = 0;
+            FitnessGlobalVariables.ProfAge = 0;
+        }
+
     }
 }

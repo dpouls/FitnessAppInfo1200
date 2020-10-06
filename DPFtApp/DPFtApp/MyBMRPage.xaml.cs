@@ -2,12 +2,13 @@
 //Class: (INFO 1200)
 //Section: (002)
 //Professor: (Crandall)
-//Date: 09/24/2020
-//Project #: 3
+//Date: 10/05/2020
+//Project #: 4
 //I declare that the source code contained in this assignment was written solely by me.
 //I understand that copying any source code, in whole or in part,
 // constitutes cheating, and that I will receive a zero on this project
 // if I am found in violation of this policy.<?xml version="1.0" encoding="utf-8" ?>
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -42,7 +43,7 @@ namespace DPFtApp
         /// <param name="e"></param>
         private async void BMRCalculateBtn_Clicked(object sender, EventArgs e)
         {
-            //delcare varialbes to hold the female and male BMR values
+            //declare varialbes to hold the female and male BMR values
             
             decimal ProfWeight = (decimal)FitnessGlobalVariables.ProfWeight;
             decimal ProfHeight = (decimal)FitnessGlobalVariables.ProfHeight;
