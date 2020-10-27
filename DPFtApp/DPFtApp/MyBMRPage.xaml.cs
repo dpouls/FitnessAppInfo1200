@@ -2,8 +2,8 @@
 //Class: (INFO 1200)
 //Section: (002)
 //Professor: (Crandall)
-//Date: 10/05/2020
-//Project #: 4
+//Date: 10/26/2020
+//Project #: 5
 //I declare that the source code contained in this assignment was written solely by me.
 //I understand that copying any source code, in whole or in part,
 // constitutes cheating, and that I will receive a zero on this project
@@ -35,6 +35,8 @@ namespace DPFtApp
         public MyBMRPage()
         {
             InitializeComponent();
+            PckActivity.SelectedIndex = 0;
+            PckGender.SelectedIndex = 0;
         }
         /// <summary>
         /// we will make a modal and make the BMR calculations, then assign the results to the corresponding labels

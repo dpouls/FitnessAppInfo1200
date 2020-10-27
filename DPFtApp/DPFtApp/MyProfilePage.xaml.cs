@@ -2,8 +2,8 @@
 //Class: (INFO 1200)
 //Section: (002)
 //Professor: (Crandall)
-//Date: 10/5/2020
-//Project #: 4
+//Date: 10/26/2020
+//Project #: 5
 //I declare that the source code contained in this assignment was written solely by me.
 //I understand that copying any source code, in whole or in part,
 // constitutes cheating, and that I will receive a zero on this project
@@ -22,6 +22,12 @@ namespace DPFtApp
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MyProfilePage : ContentPage
     {
+        const double MAX_WEIGHT = (double)1000;
+        const double MIN_WEIGHT = (double)50;
+        const double MAX_AGE = (double)120;
+        const double MIN_AGE = (double)12;
+        const double MAX_HEIGHT = (double)96;
+        const double MIN_HEIGHT = (double)48;
         public MyProfilePage()
         {
             InitializeComponent();
@@ -34,8 +40,8 @@ namespace DPFtApp
         private void MyProfileCloseBtn_Clicked(object sender, EventArgs e)
         {
             //try to see if there's any issues with the parsing, if not run this code
-            try
-            {
+            if(double.TryParse(WeightEnt.Text, out double weight) && weight <= MAX_WEIGHT && weight >= MIN_WEIGHT)
+            { 
             //set weight to the ProfWeight global variable
             FitnessGlobalVariables.ProfWeight = double.Parse(WeightEnt.Text);
             //set Height to the ProfHeight global variable
@@ -46,10 +52,10 @@ namespace DPFtApp
             Application.Current.MainPage.Navigation.PopModalAsync();
             }
             //if there are errors display this message
-            catch
+            else
             {
                 //displaay the aleart
-                DisplayAlert("Invalid Input", "Please enter integers in the Weight, Height, and Age fields.", "Close");
+                DisplayAlert("Input Error", $"Please enter weight between {MIN_WEIGHT} and {MAX_WEIGHT}", "Close");
                 BtnClearAll_Clicked(sender,e);
               
             }

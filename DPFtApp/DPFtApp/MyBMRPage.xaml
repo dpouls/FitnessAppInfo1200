@@ -11,6 +11,8 @@
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
@@ -20,8 +22,24 @@
             <Label x:Name="FemaleBMRResults" Text="Results " Grid.Row="0" Grid.Column="1" HorizontalOptions="Start" VerticalOptions="End"/>
             <Label x:Name="MaleBMRlbl" Text="MALE BMR: " Grid.Row="1" HorizontalOptions="End" VerticalOptions="Start"/>
             <Label x:Name="MaleBMRResults" Text="Results..." Grid.Row="1" Grid.Column="1" HorizontalOptions="Start" />
-            <Button x:Name="BMRCalculateBtn" Text="Calculate" Grid.Row="2" Grid.ColumnSpan="2" Clicked="BMRCalculateBtn_Clicked"/>
-            <Button x:Name="BMRCloseBtn" Text="Close" Grid.Row="3" Grid.ColumnSpan="2" Clicked="BMRCloseBtn_Clicked"/>
+            <Button x:Name="BMRCalculateBtn" Text="Calculate" Grid.Row="3" Grid.ColumnSpan="2" Clicked="BMRCalculateBtn_Clicked"/>
+            <Button x:Name="BMRCloseBtn" Text="Close" Grid.Row="4" Grid.ColumnSpan="2" Clicked="BMRCloseBtn_Clicked"/>
+            <Picker x:Name="PckActivity" Grid.Row="2">
+                <Picker.Items>
+                    <x:String>Very Light Activity</x:String>
+                    <x:String>Moderate Activity</x:String>
+                    <x:String>Heavy Activity</x:String>
+                    <x:String>Very Heavy Activity</x:String>
+                </Picker.Items>
+            </Picker>
+            <Picker x:Name="PckGender" Grid.Row="2" Grid.Column="1">
+                <Picker.Items>
+                    <x:String>Male</x:String>
+                    <x:String>Female</x:String>
+                </Picker.Items>
+            </Picker>
+
+
 
         </Grid>
     </ContentPage.Content>
