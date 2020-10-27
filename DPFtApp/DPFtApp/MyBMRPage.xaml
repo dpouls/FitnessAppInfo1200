@@ -18,18 +18,17 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Label x:Name="FemaleBMRlbl" Text="FEMALE BMR: " Grid.Row="0" HorizontalOptions="End" VerticalOptions="End"/>
-            <Label x:Name="FemaleBMRResults" Text="Results " Grid.Row="0" Grid.Column="1" HorizontalOptions="Start" VerticalOptions="End"/>
-            <Label x:Name="MaleBMRlbl" Text="MALE BMR: " Grid.Row="1" HorizontalOptions="End" VerticalOptions="Start"/>
-            <Label x:Name="MaleBMRResults" Text="Results..." Grid.Row="1" Grid.Column="1" HorizontalOptions="Start" />
+            <Label x:Name="BMRResultsLbl" Text="BMR: " Grid.Row="1" HorizontalOptions="End" VerticalOptions="Start"/>
+            <Label x:Name="BMRResults" Text="Results..." Grid.Row="1" Grid.Column="1" HorizontalOptions="Start" />
             <Button x:Name="BMRCalculateBtn" Text="Calculate" Grid.Row="3" Grid.ColumnSpan="2" Clicked="BMRCalculateBtn_Clicked"/>
             <Button x:Name="BMRCloseBtn" Text="Close" Grid.Row="4" Grid.ColumnSpan="2" Clicked="BMRCloseBtn_Clicked"/>
             <Picker x:Name="PckActivity" Grid.Row="2">
                 <Picker.Items>
-                    <x:String>Very Light Activity</x:String>
-                    <x:String>Moderate Activity</x:String>
-                    <x:String>Heavy Activity</x:String>
-                    <x:String>Very Heavy Activity</x:String>
+                    <x:String>Little to no exercise</x:String>
+                    <x:String>Light exercise (1-3 days per week)</x:String>
+                    <x:String>Moderate exercise (3-5 days per week)</x:String>
+                    <x:String>Heavy exercise (6-7 days per week)</x:String>
+                    <x:String>Very heavy exercise (twice per day, extra heavy workouts)</x:String>
                 </Picker.Items>
             </Picker>
             <Picker x:Name="PckGender" Grid.Row="2" Grid.Column="1">

@@ -32,6 +32,11 @@ namespace DPFtApp
         const decimal MALE_BMR_INDEX_WEIGHT = 6.23m;
         const decimal MALE_BMR_INDEX_HEIGHT = 12.7m;
         const decimal MALE_BMR_INDEX_AGE = 6.8m;
+        const decimal LITTLE = 1.2m;
+        const decimal LIGHT = 1.375m;
+        const decimal MODERATE = 1.55m;
+        const decimal HEAVY = 1.725m;
+        const decimal VERY_HEAVY = 1.9m;
         public MyBMRPage()
         {
             InitializeComponent();
@@ -61,12 +66,70 @@ namespace DPFtApp
             };
             await Navigation.PushModalAsync(modalPage);
             await Task.Run(() => waitHandle.WaitOne());
-            //calculate the female and male BMR and store the result for each calculation in a seperate variable. 
-            femaleBMR = FEMALE_BMR_INDEX + (FEMALE_BMR_INDEX_WEIGHT * (decimal)FitnessGlobalVariables.ProfWeight) + (FEMALE_BMR_INDEX_HEIGHT * (decimal)FitnessGlobalVariables.ProfHeight) - (FEMALE_BMR_INDEX_AGE * (decimal)FitnessGlobalVariables.ProfAge);
-            maleBMR = MALE_BMR_INDEX + (MALE_BMR_INDEX_WEIGHT * (decimal)FitnessGlobalVariables.ProfWeight) + (MALE_BMR_INDEX_HEIGHT * (decimal)FitnessGlobalVariables.ProfHeight) - (MALE_BMR_INDEX_AGE * (decimal)FitnessGlobalVariables.ProfAge);
-            //set the labels to the corresponding results
-            FemaleBMRlbl.Text = femaleBMR.ToString("n2");
-            MaleBMRlbl.Text = maleBMR.ToString("n2");
+            //check gender picker for value, calculate the female and male BMR and store the result for each calculation in a seperate variable. 
+            if (PckGender.SelectedItem.ToString() == "Male")
+            {
+                decimal multiplier = 0m;
+                
+                switch (PckActivity.SelectedItem.ToString())
+                {
+                    case "Little to no exercise":
+                        multiplier = LITTLE;
+                        break;
+                    case "Light exercise (1-3 days per week)":
+                        multiplier = LIGHT;
+                        break;
+                    case "Moderate exercise (3-5 days per week)":
+                        multiplier = MODERATE;
+                        break;
+                    case "Heavy exercise (6-7 days per week)":
+                        multiplier = HEAVY;
+                        break;
+                    case "Very heavy exercise (twice per day, extra heavy workouts)":
+                        multiplier = VERY_HEAVY;
+                        break;
+                    default:
+                        break;
+                }
+                 maleBMR = multiplier * (MALE_BMR_INDEX + (MALE_BMR_INDEX_WEIGHT * (decimal)FitnessGlobalVariables.ProfWeight) + (MALE_BMR_INDEX_HEIGHT * (decimal)FitnessGlobalVariables.ProfHeight) - (MALE_BMR_INDEX_AGE * (decimal)FitnessGlobalVariables.ProfAge));
+                //set the labels to the correspondingc results
+
+                BMRResults.Text = maleBMR.ToString("n2");
+
+            } else if(PckGender.SelectedItem.ToString() == "Female")
+            {
+                decimal multiplier = 0m;
+                //switch statement to determine which multiplier to apply.
+                switch (PckActivity.SelectedItem.ToString())
+                {
+                    case "Little to no exercise":
+                        multiplier = LITTLE;
+                        break;
+                    case "Light exercise (1-3 days per week)":
+                        multiplier = LIGHT;
+                        break;
+                    case "Moderate exercise (3-5 days per week)":
+                        multiplier = MODERATE;
+                        break;
+                    case "Heavy exercise (6-7 days per week)":
+                        multiplier = HEAVY;
+                        break;
+                    case "Very heavy exercise (twice per day, extra heavy workouts)":
+                        multiplier = VERY_HEAVY;
+                        break;
+                    default:
+                        break;
+                }
+                femaleBMR = multiplier * (FEMALE_BMR_INDEX + (FEMALE_BMR_INDEX_WEIGHT * (decimal)FitnessGlobalVariables.ProfWeight) + (FEMALE_BMR_INDEX_HEIGHT * (decimal)FitnessGlobalVariables.ProfHeight) - (FEMALE_BMR_INDEX_AGE * (decimal)FitnessGlobalVariables.ProfAge));
+
+                //set the labels to the correspondingc results
+                BMRResults.Text = femaleBMR.ToString("n2");
+            }
+
+
+            
+            
+            
 
         }
         //Navigates back to home/main page
