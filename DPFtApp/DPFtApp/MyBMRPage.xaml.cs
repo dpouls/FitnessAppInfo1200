@@ -70,7 +70,7 @@ namespace DPFtApp
             if (PckGender.SelectedItem.ToString() == "Male")
             {
                 decimal multiplier = 0m;
-                
+                //check the text of the selected activity and return a multiplier that applies to it
                 switch (PckActivity.SelectedItem.ToString())
                 {
                     case "Little to no exercise":
@@ -91,8 +91,10 @@ namespace DPFtApp
                     default:
                         break;
                 }
-                 maleBMR = multiplier * (MALE_BMR_INDEX + (MALE_BMR_INDEX_WEIGHT * (decimal)FitnessGlobalVariables.ProfWeight) + (MALE_BMR_INDEX_HEIGHT * (decimal)FitnessGlobalVariables.ProfHeight) - (MALE_BMR_INDEX_AGE * (decimal)FitnessGlobalVariables.ProfAge));
-                //set the labels to the correspondingc results
+                // set the male bmr to the result of multiplying the male bmr to the multiplier
+                maleBMR = multiplier * (MALE_BMR_INDEX + (MALE_BMR_INDEX_WEIGHT * (decimal)FitnessGlobalVariables.ProfWeight) + (MALE_BMR_INDEX_HEIGHT * (decimal)FitnessGlobalVariables.ProfHeight) - (MALE_BMR_INDEX_AGE * (decimal)FitnessGlobalVariables.ProfAge));
+
+                //set the labels to the corresponding results
 
                 BMRResults.Text = maleBMR.ToString("n2");
 
@@ -120,6 +122,7 @@ namespace DPFtApp
                     default:
                         break;
                 }
+                // set the female bmr to the result of multiplying the female bmr to the multiplier
                 femaleBMR = multiplier * (FEMALE_BMR_INDEX + (FEMALE_BMR_INDEX_WEIGHT * (decimal)FitnessGlobalVariables.ProfWeight) + (FEMALE_BMR_INDEX_HEIGHT * (decimal)FitnessGlobalVariables.ProfHeight) - (FEMALE_BMR_INDEX_AGE * (decimal)FitnessGlobalVariables.ProfAge));
 
                 //set the labels to the correspondingc results

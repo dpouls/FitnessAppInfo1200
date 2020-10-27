@@ -41,16 +41,32 @@ namespace DPFtApp
         {
             //try to see if there's any issues with the parsing, if not run this code
             if(double.TryParse(WeightEnt.Text, out double weight) && weight <= MAX_WEIGHT && weight >= MIN_WEIGHT)
-            { 
-            //set weight to the ProfWeight global variable
-            FitnessGlobalVariables.ProfWeight = double.Parse(WeightEnt.Text);
-            //set Height to the ProfHeight global variable
-            FitnessGlobalVariables.ProfHeight = double.Parse(HeightEnt.Text);
-            //set age to the ProfAge global variable
-            FitnessGlobalVariables.ProfAge = double.Parse(AgeEnt.Text);
-            //when clicked, returns user to the main page (exits my profile page)
-            Application.Current.MainPage.Navigation.PopModalAsync();
+            {
+                if (double.TryParse(HeightEnt.Text, out double height) && height <= MAX_HEIGHT && height >= MIN_HEIGHT)
+                {
+                    if (double.TryParse(AgeEnt.Text, out double age) && age <= MAX_AGE && age >= MIN_AGE)
+                    {
+                        //set weight to the ProfWeight global variable
+                        FitnessGlobalVariables.ProfWeight = double.Parse(WeightEnt.Text);
+                        //set Height to the ProfHeight global variable
+                        FitnessGlobalVariables.ProfHeight = double.Parse(HeightEnt.Text);
+                        //set age to the ProfAge global variable
+                        FitnessGlobalVariables.ProfAge = double.Parse(AgeEnt.Text);
+                        //when clicked, returns user to the main page (exits my profile page)
+                        Application.Current.MainPage.Navigation.PopModalAsync();
+                    } else
+                    {
+                        DisplayAlert("Input Error", $"Please enter age between {MIN_AGE} and {MAX_AGE}", "Close");
+                        BtnClearAll_Clicked(sender, e);
+                    }
+                }
+                else
+                {
+                    DisplayAlert("Input Error", $"Please enter height between {MIN_HEIGHT} and {MAX_HEIGHT}", "Close");
+                    BtnClearAll_Clicked(sender, e);
+                }
             }
+
             //if there are errors display this message
             else
             {
