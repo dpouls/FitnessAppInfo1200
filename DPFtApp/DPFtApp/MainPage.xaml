@@ -18,8 +18,10 @@
         </Grid.ColumnDefinitions>
         <Label x:Name="WelcomeMessage" Text="Welcome Dallin!" Grid.Row="0" Grid.ColumnSpan="2" HorizontalOptions="Center" VerticalOptions="Center"/>
         <Label x:Name="CurrentDate" Text="Today's Date" Grid.Row="1" Grid.ColumnSpan="2" HorizontalOptions="Center" VerticalOptions="Start"/>
-        <Button x:Name="BMRNavButton" Text="MY BMR PAGE" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Clicked="BMRNavButton_Clicked"/>
         <Button x:Name="MyProfileNavBtn" Text="My Profile" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Clicked="MyProfileNavBtn_Clicked"/>
+        <Button x:Name="BMRNavButton" Text="MY BMR PAGE" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Clicked="BMRNavButton_Clicked"/>
+        <!--Nav button for timer page -->
+        <Button x:Name="TimerNavButton" Text="SIMPLE TIMER" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Clicked="TimerNavButton_Clicked"/>
     </Grid>
 
 </ContentPage>

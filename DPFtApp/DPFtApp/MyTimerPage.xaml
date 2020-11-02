@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DPFtApp.MyTimerPage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <!--Title for timer page -->
+
+            <Label x:Name="TmrTitle" Text="Dallin's Simple Timer" FontSize="30" TextColor="Blue" Grid.Row="0" Grid.ColumnSpan="2" HorizontalOptions="Center" VerticalOptions="Center"/>
+            <!--frame for our timer -->
+
+            <Frame BorderColor="Blue" 
+             	       CornerRadius="30"
+                       HasShadow="True"
+            	       HorizontalOptions="Center"
+             	       VerticalOptions="Center"
+             	       Grid.Row="1"
+             	       Grid.ColumnSpan="2"
+                   Padding="10">
+                <!--Label that represents the current time of the timer -->
+
+                <Label x:Name="LblTimer"
+               	  	       Text="00:00"
+               	  	        FontSize=" 75"
+               	  	        HorizontalOptions="Center"/>
+            </Frame>
+            <!--label for the start time entry -->
+            <Label x:Name="StartTimeLbl" Text="Start Time: " FontSize="25" Grid.Row="2" HorizontalOptions="End" VerticalOptions="Center"/>
+            <!--Entry for the user input of how many seconds they want to start from -->
+            <Entry x:Name="TimeEnt" Placeholder="Enter Time" Grid.Row="2" FontSize="25" Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Center"/>
+            <!--button to start the timer -->
+            <Button x:Name="StartBtn" Text="Start" Grid.Row="3" FontSize="40" Grid.Column="0" Grid.ColumnSpan="2" Clicked="StartBtn_Clicked"/>
+            <!--Button to navigate back to the home page. -->
+            <Button x:Name="CloseBtn" Text="Close" Grid.Row="4" FontSize="40" Grid.Column="0" Grid.ColumnSpan="2" Clicked="CloseBtn_Clicked"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

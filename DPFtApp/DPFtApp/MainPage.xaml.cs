@@ -2,8 +2,8 @@
 //Class: (INFO 1200)
 //Section: (002)
 //Professor: (Crandall)
-//Date: 10/26/2020
-//Project #: 5
+//Date: 11/1/2020
+//Project #: 6
 //I declare that the source code contained in this assignment was written solely by me.
 //I understand that copying any source code, in whole or in part,
 // constitutes cheating, and that I will receive a zero on this project
@@ -38,7 +38,7 @@ namespace DPFtApp
             Navigation.PushModalAsync(new MyProfilePage());
         }
         /// <summary>
-        /// 
+        /// navigates the user to the BMR page
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -47,6 +47,17 @@ namespace DPFtApp
             //This will let a user navigate to the "My BMR" page.
             Navigation.PushAsync(new MyBMRPage());
 
+        }
+        /// <summary>
+        ///navigates the user to the timer page
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void TimerNavButton_Clicked(object sender, EventArgs e)
+        {
+            //navigates the user to the timer page
+            Navigation.PushAsync(new MyTimerPage());
         }
     }
 }
