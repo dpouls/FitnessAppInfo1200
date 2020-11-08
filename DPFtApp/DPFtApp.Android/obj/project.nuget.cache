@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+GDo0HOTrOdtfbKjfR8R+iatBadoV9FaSE4+3bLotllU00qDueOUJu63whwL9TlmNmMP3zu7/m9llNufmdLrLg==",
+  "dgSpecHash": "eC/3qBaYf6ahpfpRT0NzHfMvitAghDMs8nQ0En6zGOuEvK/B+Vdduz2fiyMS6+jLjOgFJJQobRt90ICxNZ8ouQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\dalli\\source\\repos\\DPProject6_B\\DPFtApp\\DPFtApp.Android\\DPFtApp.Android.csproj",
+  "projectFilePath": "C:\\Users\\dalli\\source\\repos\\DPProject7_B\\DPFtApp\\DPFtApp.Android\\DPFtApp.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.arch.core.common\\1.1.1.3\\xamarin.android.arch.core.common.1.1.1.3.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.arch.core.runtime\\1.1.1.3\\xamarin.android.arch.core.runtime.1.1.1.3.nupkg.sha512",
