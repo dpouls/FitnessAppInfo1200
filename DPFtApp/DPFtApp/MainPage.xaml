@@ -11,6 +11,8 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -22,6 +24,7 @@
         <Button x:Name="BMRNavButton" Text="MY BMR PAGE" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Clicked="BMRNavButton_Clicked"/>
         <!--Nav button for timer page -->
         <Button x:Name="TimerNavButton" Text="SIMPLE TIMER" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Clicked="TimerNavButton_Clicked"/>
+        <Button x:Name="BtnMyWater" Text="Water" Grid.Row="5" Grid.ColumnSpan="2" Clicked="BtnMyWater_Clicked"/>
     </Grid>
 
 </ContentPage>

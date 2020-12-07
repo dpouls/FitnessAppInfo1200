@@ -1,14 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "gS25StafRsFswWEt/1jqVCmkL4vlsjb1zmSL1Z5RM8nYA4+cdpGve0h06g16XA+mL0gBoaZ815jJ0zAl+tU5AA==",
+  "dgSpecHash": "qbG/1c7CYxWmYX/ro6pn7RB1qbMeNaQRB8VEKxaNcxsdf9LUNTxRdi9WOEwZFSqeD9zPSOTKe/PC9sct2xAUjg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\dalli\\source\\repos\\DPProject7_B\\DPFtApp\\DPFtApp\\DPFtApp.csproj",
+  "projectFilePath": "C:\\Users\\dalli\\source\\repos\\DPProject8_B\\DPFtApp\\DPFtApp\\DPFtApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dalli\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\dalli\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
     "C:\\Users\\dalli\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
-    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.6.0.1141\\xamarin.forms.4.6.0.1141.nupkg.sha512"
+    "C:\\Users\\dalli\\.nuget\\packages\\xamarin.forms\\4.6.0.1141\\xamarin.forms.4.6.0.1141.nupkg.sha512"
   ],
   "logs": []
 }

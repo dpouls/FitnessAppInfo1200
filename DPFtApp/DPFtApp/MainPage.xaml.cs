@@ -2,8 +2,8 @@
 //Class: (INFO 1200)
 //Section: (002)
 //Professor: (Crandall)
-//Date: 11/1/2020
-//Project #: 6
+//Date: 12/6/2020
+//Project #: 8 B
 //I declare that the source code contained in this assignment was written solely by me.
 //I understand that copying any source code, in whole or in part,
 // constitutes cheating, and that I will receive a zero on this project
@@ -58,6 +58,16 @@ namespace DPFtApp
         {
             //navigates the user to the timer page
             Navigation.PushAsync(new MyTimerPage());
+        }
+        /// <summary>
+        ///navigates the user to the my water page
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnMyWater_Clicked(object sender, EventArgs e)
+        {
+            //navigates the user to the my water page
+            Navigation.PushAsync(new MyWaterPage());
         }
     }
 }

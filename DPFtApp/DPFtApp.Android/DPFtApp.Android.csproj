@@ -85,7 +85,9 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Water.jpg" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DPFtApp\DPFtApp.csproj">
       <Project>{364DA5AB-BAB9-4868-A79C-8DBFA3581564}</Project>
@@ -99,4 +101,9 @@
     <AndroidResource Include="Resources\drawable\before.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties TriggeredFromHotReload="False" />
+    </VisualStudio>
+  </ProjectExtensions>
 </Project>

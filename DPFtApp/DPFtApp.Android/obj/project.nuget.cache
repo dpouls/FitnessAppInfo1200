@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "eC/3qBaYf6ahpfpRT0NzHfMvitAghDMs8nQ0En6zGOuEvK/B+Vdduz2fiyMS6+jLjOgFJJQobRt90ICxNZ8ouQ==",
+  "dgSpecHash": "ZbT7mpcsARmangvc1g8zLSOKr6tav6YXFBfahdxy6TMN/eog21Hz5EHiqUrKUmZ5YQm7JzlA/gxO0FKxxHZINQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\dalli\\source\\repos\\DPProject7_B\\DPFtApp\\DPFtApp.Android\\DPFtApp.Android.csproj",
+  "projectFilePath": "C:\\Users\\dalli\\source\\repos\\DPProject8_B\\DPFtApp\\DPFtApp.Android\\DPFtApp.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.arch.core.common\\1.1.1.3\\xamarin.android.arch.core.common.1.1.1.3.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.arch.core.runtime\\1.1.1.3\\xamarin.android.arch.core.runtime.1.1.1.3.nupkg.sha512",
@@ -42,7 +42,7 @@
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.support.versionedparcelable\\28.0.0.3\\xamarin.android.support.versionedparcelable.28.0.0.3.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.support.viewpager\\28.0.0.3\\xamarin.android.support.viewpager.28.0.0.3.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
-    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.6.0.1141\\xamarin.forms.4.6.0.1141.nupkg.sha512"
+    "C:\\Users\\dalli\\.nuget\\packages\\xamarin.forms\\4.6.0.1141\\xamarin.forms.4.6.0.1141.nupkg.sha512"
   ],
   "logs": []
 }

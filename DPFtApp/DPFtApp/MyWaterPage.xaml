@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DPFtApp.MyWaterPage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height=".5*" />
+                <RowDefinition Height=".3*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label x:Name="LblTitle" Text="My Water Count" HorizontalOptions="Center" Grid.ColumnSpan="2" Grid.Row="0" FontSize="30" VerticalOptions="Center"/>
+            <Label x:Name="LblCurDate" Text="Current Date" HorizontalOptions="Center" Grid.ColumnSpan="2" Grid.Row="1"/>
+            <Label x:Name="LblWaterCount" Text="No water yet..." HorizontalOptions="Center" FontSize="40" Grid.ColumnSpan="2" Grid.Row="2"/>
+            <StackLayout x:Name="SLWater" Orientation="Horizontal" Grid.Row="3" Grid.ColumnSpan="2">
+                
+            </StackLayout>
+            <Button x:Name="BtnAddWater" Text="Add Water" Clicked="BtnAddWater_Clicked" Grid.Row="4"/>
+            <Button x:Name="BtnClose" Text="Close" Clicked="BtnClose_Clicked" Grid.Row="4" Grid.Column="1"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
